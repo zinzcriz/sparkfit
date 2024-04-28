@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESP Firebase App</title>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+
+    <script>
+        const firebaseConfig = {
+          apiKey: "AIzaSyD8YtBQEpKJbVqEid9wdmLe-nG2VmTxd9Y",
+          authDomain: "sparkfit-7f768.firebaseapp.com",
+          databaseURL: "https://sparkfit-7f768-default-rtdb.asia-southeast1.firebasedatabase.app",
+          projectId: "sparkfit-7f768",
+          storageBucket: "sparkfit-7f768.appspot.com",
+          messagingSenderId: "791912524206",
+          appId: "1:791912524206:web:70224e07fbe3172ace403f"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.database();
+    </script>
+
+    <!-- Bootstrap for responsiveness -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <!-- Custom CSS for additional styling -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- jQuery for AJAX and other interactions -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Include custom JavaScript -->
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div class="container my-5">
+        <h1 class="text-center">Sparkfit Web App</h1>
+        <div class="row">
+            <!-- Card for Heartrate -->
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header">Heartrate</div>
+                    <div class="card-body">
+                        <p><span id="hr">--</span> BPM</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card for SpO2 -->
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header">SpO2</div>
+                    <div class="card-body">
+                        <p><span id="sp">--</span>%</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card for Temperature -->
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header">Temperature</div>
+                    <div class="card-body">
+                        <p><span id="temp">--</span> °C</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card for Voltage Level -->
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header">Voltage Level</div>
+                    <div class="card-body">
+                        <p><span id="vol">--</span> V</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Bootstrap and other scripts at the end for better loading performance -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+</body>
+</html>
+
+
